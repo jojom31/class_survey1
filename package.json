@@ -1,0 +1,25 @@
+{
+  "name": "class_survey1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:create": "createdb topics",
+    "db:destroy": "dropdb topics",
+    "db:init": "psql -f schema.sql topics",
+    "db:seed": "psql -f seed.sql topics",
+    
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "pg": "^8.5.1",
+    "promise": "^8.1.0"
+  }
+}
